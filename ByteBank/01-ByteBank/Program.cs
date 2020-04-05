@@ -10,7 +10,8 @@ namespace _01_ByteBank
     {
         static void Main(string[] args)
         {
-            new ContaCorrente();
+            Cliente cliente = new Cliente("Teste pereira", "333.333.333-33", DateTime.Parse("19911226"));
+            ContaCorrente conta = new ContaCorrente( cliente, 8380, 057854 );
 
             Console.ReadLine();
         }

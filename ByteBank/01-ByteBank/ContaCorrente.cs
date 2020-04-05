@@ -1,9 +1,19 @@
-﻿
+﻿using System;
 
 class ContaCorrente
 {
-    public string titular = "Gabriela";
-    public int numeroAgencia = 863;
-    public int numeroConta = 863146;
-    public double saldo = 100;
+    public Cliente cliente;
+    public int Agencia;
+    public int Conta;
+    public double saldo;
+
+    public ContaCorrente(Cliente cliente, int agencia, int conta)
+    {
+        this.cliente = cliente;
+        Agencia = agencia;
+        Conta = conta;
+    }
+
+        
+
 }
