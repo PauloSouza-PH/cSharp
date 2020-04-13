@@ -5,18 +5,39 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ByteBank.Modelos
-{
+{   
+    /// <summary>
+    /// Define uma conta corrente do banco ByteBank
+    /// </summary>
     public class ContaCorrente
     {
+        /// <summary>
+        /// Taxa de operação privada, serve para base de calculo
+        /// </summary>
         private static int TaxaOperacao;
 
+        /// <summary>
+        /// Incrementa a quantidade de contas
+        /// </summary>
         public static int TotalDeContasCriadas { get; private set; }
 
+        /// <summary>
+        /// Define o objeto cliente da conta
+        /// </summary>
         public Cliente Titular { get; set; }
 
+        /// <summary>
+        /// Conta quantos saques são realizados
+        /// </summary>
         public int ContadorSaquesNaoPermitidos { get; private set; }
+        /// <summary>
+        /// Conta transferencias não permitidas
+        /// </summary>
         public int ContadorTransferenciasNaoPermitidas { get; private set; }
 
+        /// <summary>
+        /// Getter Numero da conta
+        /// </summary>
         public int Numero { get; }
         public int Agencia { get; }
 
@@ -38,6 +59,13 @@ namespace ByteBank.Modelos
             }
         }
 
+        /// <summary>
+        /// Construtor da conta corrente, incrementa o <see cref="TotalDeContasCriadas"/>
+        /// e calcula a <see cref="TaxaOperacao"/>
+        /// </summary>
+        /// <exception cref="ArgumentException" Exceção lançada falta informar o numero da agencia ou conta orretamente
+        /// <param name="agencia"> Representa o valor da propriedade <see cref="Agencia"/> e precisa ser maior que zero </param>
+        /// <param name="numero"> Representa o valor da propriedade <see cref="Numero"/>e precisa ser maior que zero </param>
         public ContaCorrente(int agencia, int numero)
         {
             if (numero <= 0)

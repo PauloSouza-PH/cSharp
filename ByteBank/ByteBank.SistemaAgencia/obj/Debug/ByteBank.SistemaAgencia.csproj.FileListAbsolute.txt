@@ -1,0 +1,15 @@
+C:\Users\paulosouza.GV\source\repos\cSharp\ByteBank\ByteBank.SistemaAgencia\bin\Debug\ByteBank.SistemaAgencia.exe.config
+C:\Users\paulosouza.GV\source\repos\cSharp\ByteBank\ByteBank.SistemaAgencia\bin\Debug\ByteBank.SistemaAgencia.exe
+C:\Users\paulosouza.GV\source\repos\cSharp\ByteBank\ByteBank.SistemaAgencia\bin\Debug\ByteBank.SistemaAgencia.pdb
+C:\Users\paulosouza.GV\source\repos\cSharp\ByteBank\ByteBank.SistemaAgencia\bin\Debug\ByteBank.Modelos.dll
+C:\Users\paulosouza.GV\source\repos\cSharp\ByteBank\ByteBank.SistemaAgencia\bin\Debug\ByteBank.Modelos.pdb
+C:\Users\paulosouza.GV\source\repos\cSharp\ByteBank\ByteBank.SistemaAgencia\obj\Debug\ByteBank.SistemaAgencia.csprojAssemblyReference.cache
+C:\Users\paulosouza.GV\source\repos\cSharp\ByteBank\ByteBank.SistemaAgencia\obj\Debug\ByteBank.SistemaAgencia.csproj.CoreCompileInputs.cache
+C:\Users\paulosouza.GV\source\repos\cSharp\ByteBank\ByteBank.SistemaAgencia\obj\Debug\ByteBank.SistemaAgencia.csproj.CopyComplete
+C:\Users\paulosouza.GV\source\repos\cSharp\ByteBank\ByteBank.SistemaAgencia\obj\Debug\ByteBank.SistemaAgencia.exe
+C:\Users\paulosouza.GV\source\repos\cSharp\ByteBank\ByteBank.SistemaAgencia\obj\Debug\ByteBank.SistemaAgencia.pdb
+C:\Users\paulosouza.GV\source\repos\cSharp\ByteBank\ByteBank.SistemaAgencia\bin\Debug\Humanizer.dll
+C:\Users\paulosouza.GV\source\repos\cSharp\ByteBank\ByteBank.SistemaAgencia\bin\Debug\netstandard.dll
+C:\Users\paulosouza.GV\source\repos\cSharp\ByteBank\ByteBank.SistemaAgencia\bin\Debug\ByteBank.Modelos.xml
+C:\Users\paulosouza.GV\source\repos\cSharp\ByteBank\ByteBank.SistemaAgencia\bin\Debug\Humanizer.xml
+C:\Users\paulosouza.GV\source\repos\cSharp\ByteBank\ByteBank.SistemaAgencia\bin\Debug\pt\Humanizer.resources.dll

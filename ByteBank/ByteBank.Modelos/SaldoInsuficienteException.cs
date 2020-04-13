@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Humanizer;
 
 namespace ByteBank.Modelos
 {
@@ -17,7 +14,7 @@ namespace ByteBank.Modelos
         }
 
         public SaldoInsuficienteException(double saldo, double valorSaque)
-            : this("Tentativa de saque do valor de " + valorSaque + " em uma conta com saldo de " + saldo)
+            : this(StringHumanizeExtensions.Humanize("Tentativa de saque do valor de " + valorSaque + " em uma conta com saldo de " + saldo))
         {
             Saldo = saldo;
             ValorSaque = valorSaque;

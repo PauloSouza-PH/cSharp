@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ByteBank.Modelos</name>
+    </assembly>
+    <members>
+        <member name="T:ByteBank.Modelos.ContaCorrente">
+            <summary>
+            Define uma conta corrente do banco ByteBank
+            </summary>
+        </member>
+        <member name="F:ByteBank.Modelos.ContaCorrente.TaxaOperacao">
+            <summary>
+            Taxa de operação privada, serve para base de calculo
+            </summary>
+        </member>
+        <member name="P:ByteBank.Modelos.ContaCorrente.TotalDeContasCriadas">
+            <summary>
+            Incrementa a quantidade de contas
+            </summary>
+        </member>
+        <member name="P:ByteBank.Modelos.ContaCorrente.Titular">
+            <summary>
+            Define o objeto cliente da conta
+            </summary>
+        </member>
+        <member name="P:ByteBank.Modelos.ContaCorrente.ContadorSaquesNaoPermitidos">
+            <summary>
+            Conta quantos saques são realizados
+            </summary>
+        </member>
+        <member name="P:ByteBank.Modelos.ContaCorrente.ContadorTransferenciasNaoPermitidas">
+            <summary>
+            Conta transferencias não permitidas
+            </summary>
+        </member>
+        <member name="P:ByteBank.Modelos.ContaCorrente.Numero">
+            <summary>
+            Getter Numero da conta
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:ByteBank.Modelos.ContaCorrente.#ctor(System.Int32,System.Int32)" -->
+    </members>
+</doc>
