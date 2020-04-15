@@ -4,41 +4,25 @@
         <name>ByteBank.Modelos</name>
     </assembly>
     <members>
-        <member name="T:ByteBank.Modelos.ContaCorrente">
+        <member name="T:ByteBank.Modelos.SistemaInterno.ContaCorrente">
             <summary>
-            Define uma conta corrente do banco ByteBank
+            Define uma Conta Corrente do banco ByteBank.
             </summary>
         </member>
-        <member name="F:ByteBank.Modelos.ContaCorrente.TaxaOperacao">
+        <member name="M:ByteBank.Modelos.SistemaInterno.ContaCorrente.#ctor(System.Int32,System.Int32)">
             <summary>
-            Taxa de operação privada, serve para base de calculo
+            Cria uma instância de ContaCorrente com os argumentos utilizados.
             </summary>
+            <param name="agencia"> Representa o valor da propriedade <see cref="P:ByteBank.Modelos.SistemaInterno.ContaCorrente.Agencia"/> e deve possuir um valor maior que zero. </param>
+            <param name="numero"> Representa o valor da propriedade <see cref="P:ByteBank.Modelos.SistemaInterno.ContaCorrente.Numero"/> e deve possuir um valor maior que zero. </param>
         </member>
-        <member name="P:ByteBank.Modelos.ContaCorrente.TotalDeContasCriadas">
+        <member name="M:ByteBank.Modelos.SistemaInterno.ContaCorrente.Sacar(System.Double)">
             <summary>
-            Incrementa a quantidade de contas
+            Realiza o saque e atualiza o valor da propriedade <see cref="P:ByteBank.Modelos.SistemaInterno.ContaCorrente.Saldo"/>.
             </summary>
+            <exception cref="T:System.ArgumentException"> Exceção lançada quando um valor negativo é utilizado no argumento <paramref name="valor"/>. </exception>
+            <exception cref="T:ByteBank.Modelos.Exceptions.SaldoInsuficienteException"> Exceção lançada quando o valor de <paramref name="valor"/> é maior que o valor da propriedade <see cref="P:ByteBank.Modelos.SistemaInterno.ContaCorrente.Saldo"/>. </exception>
+            <param name="valor"> Representa o valor do saque, deve ser maior que 0 e menor que o <see cref="P:ByteBank.Modelos.SistemaInterno.ContaCorrente.Saldo"/>. </param>
         </member>
-        <member name="P:ByteBank.Modelos.ContaCorrente.Titular">
-            <summary>
-            Define o objeto cliente da conta
-            </summary>
-        </member>
-        <member name="P:ByteBank.Modelos.ContaCorrente.ContadorSaquesNaoPermitidos">
-            <summary>
-            Conta quantos saques são realizados
-            </summary>
-        </member>
-        <member name="P:ByteBank.Modelos.ContaCorrente.ContadorTransferenciasNaoPermitidas">
-            <summary>
-            Conta transferencias não permitidas
-            </summary>
-        </member>
-        <member name="P:ByteBank.Modelos.ContaCorrente.Numero">
-            <summary>
-            Getter Numero da conta
-            </summary>
-        </member>
-        <!-- Badly formed XML comment ignored for member "M:ByteBank.Modelos.ContaCorrente.#ctor(System.Int32,System.Int32)" -->
     </members>
 </doc>
