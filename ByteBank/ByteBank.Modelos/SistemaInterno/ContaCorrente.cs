@@ -1,4 +1,5 @@
-﻿using ByteBank.Modelos.Exceptions;
+﻿using ByteBank.Modelos.dbSys;
+using ByteBank.Modelos.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,56 +13,38 @@ namespace ByteBank.Modelos.SistemaInterno
     /// </summary>
     public class ContaCorrente : IComparable
     {
-        private static int TaxaOperacao;
-
         public static int TotalDeContasCriadas { get; private set; }
-
-        public Cliente Titular { get; set; }
-
+        public static int TaxaOperacao { get ; private set; }
+        public Cliente Titular { get; private set; }
         public int ContadorSaquesNaoPermitidos { get; private set; }
         public int ContadorTransferenciasNaoPermitidas { get; private set; }
-
         public int Numero { get; }
         public int Agencia { get; }
 
-        private double _saldo = 100;
-        public double Saldo
-        {
-            get
-            {
-                return _saldo;
-            }
-            set
-            {
-                if (value < 0)
-                {
-                    return;
-                }
-
-                _saldo = value;
-            }
-        }
+        private double _saldo;
+        
+        public double Saldo { get; private set; }
 
         /// <summary>
         /// Cria uma instância de ContaCorrente com os argumentos utilizados.
         /// </summary>
         /// <param name="agencia"> Representa o valor da propriedade <see cref="Agencia"/> e deve possuir um valor maior que zero. </param>
         /// <param name="numero"> Representa o valor da propriedade <see cref="Numero"/> e deve possuir um valor maior que zero. </param>
-        public ContaCorrente(int agencia, int numero)
+        /// <param name="cliente"> Representa o valor da propriedade <see cref="Cliente"/> e não pode ser nulo. </param>
+        public ContaCorrente(int agencia, int numero, Cliente cliente)
         {
-            if (numero <= 0)
-            {
+            if (agencia <= 0)
                 throw new ArgumentException("O argumento agencia deve ser maior que 0.", nameof(agencia));
-            }
-
+           
             if (numero <= 0)
-            {
                 throw new ArgumentException("O argumento numero deve ser maior que 0.", nameof(numero));
-            }
 
+            if (cliente == null)
+                throw new ArgumentNullException("O argumento fornecido esta nulo", nameof(cliente));
+            
             Agencia = agencia;
             Numero = numero;
-
+            Titular = cliente;
             TotalDeContasCriadas++;
             TaxaOperacao = 30 / TotalDeContasCriadas;
         }
@@ -75,10 +58,8 @@ namespace ByteBank.Modelos.SistemaInterno
         public void Sacar(double valor)
         {
             if (valor < 0)
-            {
                 throw new ArgumentException("Valor inválido para o saque.", nameof(valor));
-            }
-
+            
             if (_saldo < valor)
             {
                 ContadorSaquesNaoPermitidos++;
@@ -96,10 +77,8 @@ namespace ByteBank.Modelos.SistemaInterno
         public void Transferir(double valor, ContaCorrente contaDestino)
         {
             if (valor < 0)
-            {
                 throw new ArgumentException("Valor inválido para a transferência.", nameof(valor));
-            }
-
+            
             try
             {
                 Sacar(valor);
@@ -113,6 +92,15 @@ namespace ByteBank.Modelos.SistemaInterno
             contaDestino.Depositar(valor);
         }
 
+        public void Persistir()
+        {
+            using (var contexto = new ByteBankContext())
+            {
+                Console.WriteLine($"Salvando as informações da conta em banco de dados\n{this.ToString()}");
+                contexto.ContaCorrente.Add(this);
+                contexto.SaveChanges();
+            }
+        }
 
         public override string ToString()
         {
@@ -125,7 +113,7 @@ namespace ByteBank.Modelos.SistemaInterno
                0=Equivalente
                1=Proximo*/
             var outraConta = obj as ContaCorrente;
-            
+
             if (Agencia < outraConta.Agencia || outraConta == null)
                 return -1;
 
