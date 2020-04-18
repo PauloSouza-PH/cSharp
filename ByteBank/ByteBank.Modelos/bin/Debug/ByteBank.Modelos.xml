@@ -4,17 +4,17 @@
         <name>ByteBank.Modelos</name>
     </assembly>
     <members>
-        <member name="T:ByteBank.Modelos.dbSys.ByteBankContext">
+        <member name="T:ByteBank.Modelos.dbSys.ClienteContext">
             <summary>
             Classe responsável por persistir os dados na base
             </summary>
         </member>
-        <member name="P:ByteBank.Modelos.dbSys.ByteBankContext.ContaCorrente">
+        <member name="P:ByteBank.Modelos.dbSys.ClienteContext.Cliente">
             <summary>
             Contexto public para persistencia da conta corrente
             </summary>
         </member>
-        <member name="M:ByteBank.Modelos.dbSys.ByteBankContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
+        <member name="M:ByteBank.Modelos.dbSys.ClienteContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
             <summary>
             Metodo padrão para persistencia dos dados
             </summary>

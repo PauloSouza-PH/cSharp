@@ -92,16 +92,6 @@ namespace ByteBank.Modelos.SistemaInterno
             contaDestino.Depositar(valor);
         }
 
-        public void Persistir()
-        {
-            using (var contexto = new ByteBankContext())
-            {
-                Console.WriteLine($"Salvando as informações da conta em banco de dados\n{this.ToString()}");
-                contexto.ContaCorrente.Add(this);
-                contexto.SaveChanges();
-            }
-        }
-
         public override string ToString()
         {
             return $"Agencia:{Agencia} \tConta: {Numero}";
