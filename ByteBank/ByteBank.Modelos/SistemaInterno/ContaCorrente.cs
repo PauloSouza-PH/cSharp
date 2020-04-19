@@ -13,40 +13,34 @@ namespace ByteBank.Modelos.SistemaInterno
     /// </summary>
     public class ContaCorrente : IComparable
     {
+        public int Id { get; set; }
         public static int TotalDeContasCriadas { get; private set; }
-        public static int TaxaOperacao { get ; private set; }
-        public Cliente Titular { get; private set; }
         public int ContadorSaquesNaoPermitidos { get; private set; }
         public int ContadorTransferenciasNaoPermitidas { get; private set; }
-        public int Numero { get; }
-        public int Agencia { get; }
+        public int Numero { get; private set; }
+        public int Agencia { get; private set; }
 
-        private double _saldo;
-        
         public double Saldo { get; private set; }
+        public List<Movimentos> Movimentacoes { get; set; }
 
         /// <summary>
         /// Cria uma instância de ContaCorrente com os argumentos utilizados.
         /// </summary>
         /// <param name="agencia"> Representa o valor da propriedade <see cref="Agencia"/> e deve possuir um valor maior que zero. </param>
         /// <param name="numero"> Representa o valor da propriedade <see cref="Numero"/> e deve possuir um valor maior que zero. </param>
-        /// <param name="cliente"> Representa o valor da propriedade <see cref="Cliente"/> e não pode ser nulo. </param>
-        public ContaCorrente(int agencia, int numero, Cliente cliente)
-        {
+        /// <param name="cliente"> Representa o valor da propriedade <see cref="SistemaInterno.Cliente"/> e não pode ser nulo. </param>
+        public ContaCorrente(){}
+
+        public ContaCorrente(int agencia, int numero) {
             if (agencia <= 0)
                 throw new ArgumentException("O argumento agencia deve ser maior que 0.", nameof(agencia));
-           
+
             if (numero <= 0)
                 throw new ArgumentException("O argumento numero deve ser maior que 0.", nameof(numero));
 
-            if (cliente == null)
-                throw new ArgumentNullException("O argumento fornecido esta nulo", nameof(cliente));
-            
             Agencia = agencia;
             Numero = numero;
-            Titular = cliente;
             TotalDeContasCriadas++;
-            TaxaOperacao = 30 / TotalDeContasCriadas;
         }
 
         /// <summary>
@@ -60,18 +54,21 @@ namespace ByteBank.Modelos.SistemaInterno
             if (valor < 0)
                 throw new ArgumentException("Valor inválido para o saque.", nameof(valor));
             
-            if (_saldo < valor)
+            if (Saldo < valor)
             {
                 ContadorSaquesNaoPermitidos++;
                 throw new SaldoInsuficienteException(Saldo, valor);
             }
 
-            _saldo -= valor;
+            Saldo -= valor;
+
+            Movimentacoes.Add(new Movimentos() { Tipo = "SAIDA", Valor = valor });
         }
 
         public void Depositar(double valor)
         {
-            _saldo += valor;
+            Saldo += valor;
+            Movimentacoes.Add(new Movimentos() { Tipo = "ENTRADA", Valor = valor });
         }
 
         public void Transferir(double valor, ContaCorrente contaDestino)

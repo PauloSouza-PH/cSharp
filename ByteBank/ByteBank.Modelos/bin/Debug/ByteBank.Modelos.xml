@@ -4,17 +4,22 @@
         <name>ByteBank.Modelos</name>
     </assembly>
     <members>
-        <member name="T:ByteBank.Modelos.dbSys.ClienteContext">
+        <member name="T:ByteBank.Modelos.dbSys.ByteBankContext">
             <summary>
             Classe responsável por persistir os dados na base
             </summary>
         </member>
-        <member name="P:ByteBank.Modelos.dbSys.ClienteContext.Cliente">
+        <member name="P:ByteBank.Modelos.dbSys.ByteBankContext.Cliente">
             <summary>
-            Contexto public para persistencia da conta corrente
+            Contexto public para persistencia de cliente
             </summary>
         </member>
-        <member name="M:ByteBank.Modelos.dbSys.ClienteContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
+        <member name="P:ByteBank.Modelos.dbSys.ByteBankContext.ContaCorrente">
+            <summary>
+            Contexto public para a persistencia da conta corrente 
+            </summary>
+        </member>
+        <member name="M:ByteBank.Modelos.dbSys.ByteBankContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
             <summary>
             Metodo padrão para persistencia dos dados
             </summary>
@@ -25,7 +30,7 @@
             Define uma Conta Corrente do banco ByteBank.
             </summary>
         </member>
-        <member name="M:ByteBank.Modelos.SistemaInterno.ContaCorrente.#ctor(System.Int32,System.Int32,ByteBank.Modelos.SistemaInterno.Cliente)">
+        <member name="M:ByteBank.Modelos.SistemaInterno.ContaCorrente.#ctor">
             <summary>
             Cria uma instância de ContaCorrente com os argumentos utilizados.
             </summary>

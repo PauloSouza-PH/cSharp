@@ -1,6 +1,7 @@
 ﻿using System;
 using ByteBank.Modelos.SistemaInterno;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace ByteBank.SistemaAgencia
 {
@@ -8,9 +9,7 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
-            var cliente = Cliente.GetCliente("123");
-            cliente.Nome = "Paulo Henrique Liberato de Souza";           
-            cliente.Update();
+                
 
             Console.ReadLine();
         }

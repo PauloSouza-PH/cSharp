@@ -189,3 +189,5 @@ C:\Users\paulosouza.GV\source\repos\cSharp\ByteBank\ByteBank.SistemaAgencia\bin\
 C:\Users\paulosouza.GV\source\repos\cSharp\ByteBank\ByteBank.SistemaAgencia\bin\Debug\Microsoft.IdentityModel.Tokens.xml
 C:\Users\paulosouza.GV\source\repos\cSharp\ByteBank\ByteBank.SistemaAgencia\bin\Debug\Newtonsoft.Json.xml
 C:\Users\paulosouza.GV\source\repos\cSharp\ByteBank\ByteBank.SistemaAgencia\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\paulosouza.GV\source\repos\cSharp\ByteBank\ByteBank.SistemaAgencia\bin\Debug\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\paulosouza.GV\source\repos\cSharp\ByteBank\ByteBank.SistemaAgencia\bin\Debug\Microsoft.EntityFrameworkCore.Design.xml
