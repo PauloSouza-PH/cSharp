@@ -1,0 +1,17 @@
+C:\Users\paulosouza.GV\source\repos\cSharp\Ecommerce_estudo\bin\Debug\netcoreapp2.0\appsettings.Development.json
+C:\Users\paulosouza.GV\source\repos\cSharp\Ecommerce_estudo\bin\Debug\netcoreapp2.0\appsettings.json
+C:\Users\paulosouza.GV\source\repos\cSharp\Ecommerce_estudo\bin\Debug\netcoreapp2.0\bundleconfig.json
+C:\Users\paulosouza.GV\source\repos\cSharp\Ecommerce_estudo\bin\Debug\netcoreapp2.0\livros.json
+C:\Users\paulosouza.GV\source\repos\cSharp\Ecommerce_estudo\bin\Debug\netcoreapp2.0\Properties\launchSettings.json
+C:\Users\paulosouza.GV\source\repos\cSharp\Ecommerce_estudo\bin\Debug\netcoreapp2.0\Ecommerce_estudo.deps.json
+C:\Users\paulosouza.GV\source\repos\cSharp\Ecommerce_estudo\bin\Debug\netcoreapp2.0\Ecommerce_estudo.runtimeconfig.json
+C:\Users\paulosouza.GV\source\repos\cSharp\Ecommerce_estudo\bin\Debug\netcoreapp2.0\Ecommerce_estudo.runtimeconfig.dev.json
+C:\Users\paulosouza.GV\source\repos\cSharp\Ecommerce_estudo\bin\Debug\netcoreapp2.0\Ecommerce_estudo.dll
+C:\Users\paulosouza.GV\source\repos\cSharp\Ecommerce_estudo\bin\Debug\netcoreapp2.0\Ecommerce_estudo.pdb
+C:\Users\paulosouza.GV\source\repos\cSharp\Ecommerce_estudo\obj\Debug\netcoreapp2.0\Ecommerce_estudo.csprojAssemblyReference.cache
+C:\Users\paulosouza.GV\source\repos\cSharp\Ecommerce_estudo\obj\Debug\netcoreapp2.0\Ecommerce_estudo.csproj.CoreCompileInputs.cache
+C:\Users\paulosouza.GV\source\repos\cSharp\Ecommerce_estudo\obj\Debug\netcoreapp2.0\Ecommerce_estudo.AssemblyInfoInputs.cache
+C:\Users\paulosouza.GV\source\repos\cSharp\Ecommerce_estudo\obj\Debug\netcoreapp2.0\Ecommerce_estudo.AssemblyInfo.cs
+C:\Users\paulosouza.GV\source\repos\cSharp\Ecommerce_estudo\obj\Debug\netcoreapp2.0\Ecommerce_estudo.dll
+C:\Users\paulosouza.GV\source\repos\cSharp\Ecommerce_estudo\obj\Debug\netcoreapp2.0\Ecommerce_estudo.pdb
+C:\Users\paulosouza.GV\source\repos\cSharp\Ecommerce_estudo\obj\Debug\netcoreapp2.0\Ecommerce_estudo.genruntimeconfig.cache
